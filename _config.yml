@@ -12,7 +12,7 @@ baseurl: ""
 lang: en_US
 
 # Path to your CV. To update: upload the new PDF and change this line.
-cv: /CV_Nov26.pdf
+cv: /CV_Website_Nov26.pdf
 
 author:
   name: Faisal Quaiyyum
