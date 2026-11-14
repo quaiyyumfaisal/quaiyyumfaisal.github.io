@@ -1,0 +1,89 @@
+# ─────────────────────────────────────────────────────────────
+#  Site settings — edit these, then commit. GitHub rebuilds the site.
+# ─────────────────────────────────────────────────────────────
+title: Faisal Quaiyyum
+tagline: Research Professional, Chicago Booth
+description: >-
+  Research Professional at the Fama-Miller Center for Research in Finance,
+  University of Chicago Booth School of Business. Macro-finance, beliefs,
+  and networks.
+url: "https://quaiyyumfaisal.github.io"
+baseurl: ""
+lang: en_US
+
+# Path to your CV. To update: upload the new PDF and change this line.
+cv: /CV_Nov26.pdf
+
+author:
+  name: Faisal Quaiyyum
+  role: Research Professional (Predoctoral Research Fellow)
+  affiliation: Fama-Miller Center for Research in Finance
+  institution: University of Chicago Booth School of Business
+  email: faisal.quaiyyum@chicagobooth.edu
+  twitter: faisal_quaiyyum
+  photo: /assets/img/profile.jpg
+  scholar: https://scholar.google.com/citations?user=9-5q1SIAAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/faisal-quaiyyum-inan/
+  x: https://x.com/faisal_quaiyyum
+  github: https://github.com/quaiyyumfaisal
+
+# Link previews (Slack, X, LinkedIn, iMessage…) use the image set under `defaults` below.
+twitter:
+  username: faisal_quaiyyum
+social:
+  name: Faisal Quaiyyum
+  links:
+    - https://scholar.google.com/citations?user=9-5q1SIAAAAJ&hl=en
+    - https://www.linkedin.com/in/faisal-quaiyyum-inan/
+    - https://x.com/faisal_quaiyyum
+    - https://github.com/quaiyyumfaisal
+
+# Top navigation
+nav:
+  - title: About
+    url: /
+  - title: Research
+    url: /research/
+  - title: Notes
+    url: /notes/
+
+# ─────────────────────────────────────────────────────────────
+#  Notes: every Markdown file in _notes/ becomes /notes/<file-name>/
+# ─────────────────────────────────────────────────────────────
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image: /assets/img/og-image.jpg
+
+# Markdown + code highlighting (GitHub Pages defaults, set explicitly)
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax   # lets you write $$x^2$$; rendered with KaTeX when a note sets `math: true`
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .jekyll-cache
+  - .sass-cache

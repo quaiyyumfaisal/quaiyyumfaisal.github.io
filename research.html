@@ -1,0 +1,51 @@
+---
+title: Research & Publications
+permalink: /research/
+description: Publications, working papers, research reports, monographs, and media write-ups by Faisal Quaiyyum.
+---
+<header class="page-header">
+  <h1>Research &amp; Publications</h1>
+  <p class="page-lede">
+    Also on <a href="{{ site.author.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+    and in my <a href="{{ site.cv | relative_url }}" target="_blank" rel="noopener">CV</a>.
+  </p>
+  <nav class="toc" aria-label="Sections">
+    {%- for group in site.data.research %}
+    <a href="#{{ group.section | slugify }}">{{ group.section }}</a>
+    {%- endfor %}
+  </nav>
+</header>
+
+{% for group in site.data.research %}
+<section class="section" id="{{ group.section | slugify }}">
+  <h2 class="section-title">{{ group.section }} <span class="count">{{ group.items.size }}</span></h2>
+  <ol class="papers">
+  {%- for p in group.items %}
+    <li class="paper">
+      <h3 class="paper-title">
+        {%- if p.url -%}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{%- else -%}{{ p.title }}{%- endif -%}
+      </h3>
+      <p class="paper-meta">
+        {%- if p.coauthors %}<span>with {{ p.coauthors }}</span>{% endif -%}
+        {%- if p.venue %}<span>{{ p.venue | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>{% endif -%}
+        {%- if p.date %}<span>{{ p.date }}</span>{% endif -%}
+        {%- if p.status %}<span class="badge">{{ p.status }}</span>{% endif -%}
+      </p>
+      {%- if p.links or p.abstract %}
+      <div class="paper-actions">
+        {%- for l in p.links %}
+        <a class="chip" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+        {%- endfor %}
+        {%- if p.abstract %}
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <p>{{ p.abstract }}</p>
+        </details>
+        {%- endif %}
+      </div>
+      {%- endif %}
+    </li>
+  {%- endfor %}
+  </ol>
+</section>
+{% endfor %}

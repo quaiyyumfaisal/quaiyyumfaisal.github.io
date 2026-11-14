@@ -1,0 +1,21 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.author.name }}, home">
+      {%- include icon.html name="mark" -%}
+      <span>{{ site.author.name }}</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      {%- for item in site.nav -%}
+        {%- assign active = false -%}
+        {%- if item.url == "/" -%}
+          {%- if page.url == "/" or page.url == "/index.html" -%}{%- assign active = true -%}{%- endif -%}
+        {%- elsif page.url contains item.url -%}
+          {%- assign active = true -%}
+        {%- endif %}
+      <a href="{{ item.url | relative_url }}"{% if active %} class="active" aria-current="page"{% endif %}>{{ item.title }}</a>
+      {%- endfor %}
+      <a href="{{ site.cv | relative_url }}" target="_blank" rel="noopener">CV{% include icon.html name="external" %}</a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,9 @@
+{%- comment -%}
+  Prints a title, keeping short hyphenated tokens (10-K, 8-K, 10-K/A…) on one line.
+  Usage: {% include title.html title=page.title %}
+{%- endcomment -%}
+{%- assign words = include.title | split: " " -%}
+{%- for w in words -%}
+  {%- if w contains "-" and w.size < 9 -%}<span class="nowrap">{{ w | escape }}</span>{%- else -%}{{ w | escape }}{%- endif -%}
+  {%- unless forloop.last -%}{{ " " }}{%- endunless -%}
+{%- endfor -%}

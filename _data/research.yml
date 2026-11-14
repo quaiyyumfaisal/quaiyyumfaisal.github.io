@@ -1,0 +1,181 @@
+# ─────────────────────────────────────────────────────────────
+#  Research & Publications — the Research page is generated from this file.
+#
+#  To add a paper, copy an existing entry and edit it. Fields:
+#    title      (required)
+#    url        link on the title
+#    coauthors  shown as "with …"
+#    venue      journal / series; Markdown allowed (e.g. *Energy Policy*)
+#    date       free text, e.g. "November 2026"
+#    status     optional badge, e.g. "Revise & Resubmit"
+#    featured   true → also listed on the home page
+#    links      extra buttons: - { label: ..., url: ... }
+#    abstract   optional; shown in a collapsible "Abstract" toggle
+# ─────────────────────────────────────────────────────────────
+
+- section: Publications
+  items:
+    - title: "The Trade Route to Renewables: Import as a Catalyst for the Diffusion of Renewable Energy Technology"
+      url: https://doi.org/10.1016/j.enpol.2026.115390
+      coauthors: Atonu Rabbani
+      venue: "*Energy Policy*, 216(C): 115390"
+      date: "2026"
+      featured: true
+      links:
+        - label: Working paper
+          url: https://www.dropbox.com/scl/fi/sbnusifn79gfzohm520j4/RET_Diffusion_Jan26.pdf?rlkey=6ha53qjnn9zmx5aurybn5xt24&st=lpxwhh2m&dl=0
+        - label: Replication package
+          url: https://data.mendeley.com/datasets/9xrh6try4b/2
+
+- section: Working Papers
+  items:
+    - title: "Social Networks and the Propagation of Household Shocks to Asset Prices"
+      url: https://arxiv.org/abs/2611.01540
+      venue: "arXiv:2611.01540"
+      date: "November 2026"
+      featured: true
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2611.01540
+      abstract: >-
+        When can local household disturbances move credit prices? I develop a
+        financially weighted propagation operator on the social network. In a
+        conditional household-intermediary equilibrium, its projection determines
+        the household-demand component of the excess bond premium. Because
+        responses decay at different rates across network patterns and channels,
+        a location's relative financial importance generically changes with the
+        horizon, so no single centrality measure summarizes exposure across
+        horizons. Household measurements recover this projection exactly when
+        they span independently measured demand sensitivities. Empirically,
+        social exposure to storm-damaged counties is negatively associated with
+        spending weeks later in counties outside the recorded footprints. In
+        simulations on the observed network under the model's diffusion law, the
+        operator predicts the propagated credit-premium component of held-out
+        storms with about 30 percent less error than direct social exposure.
+
+    - title: "That Time of the Year Again: Government Pay Revisions in the Aggregate Economy"
+      url: https://arxiv.org/abs/2611.12565
+      venue: "arXiv:2611.12565"
+      date: "November 2026"
+      featured: true
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2611.12565
+      abstract: >-
+        Public pay is set by law in nominal terms, so inflation erodes its real
+        value between legal acts until the government revises it. I model each
+        revision as the choice of a forward-looking government, shaped by two
+        costs that push in opposite directions. A fixed cost of acting makes
+        revisions large and rare, whereas a convex cost of financing the increase
+        at once makes them small and frequent. Through the budget, each revision
+        also moves debt and the risk of fiscal stress under which the next one is
+        made. In the documented pay decisions of eleven countries, pay set at
+        discretion erodes against prices and private earnings and is restored in
+        discrete steps, every cut was decided during market stress or an
+        adjustment program, and court rulings drove a wedge between the cuts
+        legislated, the cuts paid and the cuts that lasted. Estimated on the
+        legal acts, the model reproduces the documented paths of pay in most
+        countries when data and simulations are measured the same way. In
+        Portugal's estimated model, the savings that the Treasury requires once
+        spreads rise produce the cuts, the debt overhang holds pay down after the
+        crisis, and a court that strikes cuts after they take effect invites cuts
+        it will strike. Review of cuts before they took effect would have lowered
+        the social cost of Portugal's crisis relative to review after the fact,
+        and partial indexation would have paid in Bangladesh unless its automatic
+        increases were costly to finance.
+
+    - title: "Lights Out, Stress In: Assessing Stress Amidst Power and Energy Challenges in Bangladesh"
+      url: https://arxiv.org/abs/2504.21541
+      coauthors: Khondaker Golam Moazzem
+      venue: "CPD Working Paper No. 156"
+      date: "April 2025"
+      links:
+        - label: arXiv
+          url: https://arxiv.org/abs/2504.21541
+      abstract: >-
+        This study examines the psychological impact of energy crises on
+        households, utilising the Perceived Stress Scale-10 (PSS-10) to measure
+        the stress induced by disruptions in electricity, gas, and fuel supply
+        and pricing. Through a multivariate analysis incorporating Ordinary Least
+        Squares (OLS) regression, Simultaneous-Quantile Regressions (SQR), Random
+        Forest (RF) and Ordered Probit models, the research identifies the key
+        socio-demographic and environmental factors influencing household stress.
+        Our findings reveal that urban residency, low-income households, older
+        individuals, and those with low environmental awareness are particularly
+        vulnerable to stress during energy crises. Regional disparities and
+        attitudes towards nuclear and renewable energy also significantly shape
+        stress responses. The study emphasises the need for psychologically-informed
+        energy policy, advocating for the inclusion of stress metrics in energy
+        planning to enhance resilience and address the multi-dimensional nature
+        of energy insecurity. This research contributes a novel, human-centric
+        perspective to energy policy, urging policymakers to integrate
+        psychosocial resilience alongside traditional technical and economic
+        considerations in the design of energy interventions.
+
+    - title: "The Future Unplugged: Forecasting a Comprehensive Energy Demand of Bangladesh – a Long Run Error Correction Model"
+      url: https://doi.org/10.2139/ssrn.5079696
+      coauthors: Khondaker Golam Moazzem
+      date: "April 2024"
+      links:
+        - label: SSRN
+          url: https://doi.org/10.2139/ssrn.5079696
+
+- section: Research Reports
+  items:
+    - title: "Access to Finance for Agricultural Mechanization in Bangladesh – Explaining Alternative Financial Instruments"
+      url: https://cpd.org.bd/resources/2026/01/Access-to-Finance-for-Agricultural-Mechanisation-Option.pdf
+      coauthors: Khondaker Golam Moazzem, Abrar Ahammed Bhuiyan, Rassiq Aziz Kabir
+      venue: CPD-CIMMYT-iDE Report
+      date: "January 2026"
+
+    - title: "Towards Sustainable Agro-Mechanization in Bangladesh – Addressing Fiscal Barriers"
+      url: https://cpd.org.bd/resources/2025/11/Towards-Sustainable-Agro-Mechanization-in-Bangladesh-Addressing-Fiscal-Barriers.pdf
+      coauthors: Khondaker Golam Moazzem, Abrar Ahammed Bhuiyan, Rassiq Aziz Kabir
+      venue: CPD-CIMMYT-iDE Report
+      date: "November 2025"
+
+    - title: "Market-based Fuel Pricing Using Artificial Neural Network: Government-led Initiatives and Possible Revision"
+      url: https://doi.org/10.2139/ssrn.5191714
+      coauthors: Khondaker Golam Moazzem and Helen Mashiyat Preoty
+      venue: CPD Report
+      date: "March 2025"
+
+    - title: "Factors Determining Power and Energy Consumption Behaviour of Households in Bangladesh: A Cross-Section Analysis"
+      url: https://www.ssrn.com/abstract=4733180
+      coauthors: Khondaker Golam Moazzem
+      venue: CPD Report
+      date: "January 2024"
+
+- section: Research Monographs
+  items:
+    - title: "Exploring the Existence of Crowding-out Effect and Influence of Macroeconomic Indicators on Capital Market in Bangladesh: A Vector Autoregressive Analysis"
+      url: https://doi.org/10.2139/ssrn.5075785
+      date: "January 2024"
+
+    - title: "Macroeconomic Determinants of Capital Market and Market Capitalization in South Asia: A Panel Regression Analysis (2010-2019)"
+      url: https://doi.org/10.2139/ssrn.4401146
+      date: "March 2023"
+
+    - title: "Relationship Between Democracy and Gender Inequality: A Cross Country Analysis"
+      url: https://doi.org/10.2139/ssrn.4184754
+      coauthors: Kazi Aiman Udoy
+      date: "August 2022"
+
+    - title: "People’s Perceptions of Inflation: A Survey Data Analysis"
+      url: https://doi.org/10.2139/ssrn.3896974
+      coauthors: Kazi Aiman Udoy
+      date: "July 2021"
+
+- section: Media Write-ups
+  items:
+    - title: "How the Power and Energy Sector Can Come Out of Constant Financial Crunch"
+      url: https://www.thedailystar.net/opinion/views/news/how-the-power-and-energy-sector-can-come-out-constant-financial-crunch-3882916
+      coauthors: Khondaker Golam Moazzem and Helen Mashiyat Preoty
+      venue: "*The Daily Star*"
+      date: "April 2025"
+
+    - title: "2023 Integrated Energy and Power Master Plan: The Numbers Don’t Add Up"
+      url: https://www.thedailystar.net/opinion/views/news/2023-integrated-energy-power-master-plan-the-numbers-dont-add-3706011
+      coauthors: Khondaker Golam Moazzem
+      venue: "*The Daily Star*"
+      date: "September 2024"

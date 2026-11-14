@@ -1,0 +1,76 @@
+---
+---
+{%- assign a = site.author -%}
+<section class="hero">
+  <img class="avatar" src="{{ a.photo | relative_url }}" alt="Portrait of {{ a.name }}" width="152" height="152">
+  <div class="hero-text">
+    <h1>{{ a.name }}</h1>
+    <p class="role">{{ a.role }}</p>
+    <p class="affil">{{ a.affiliation }}<br>{{ a.institution }}</p>
+    {% include social.html %}
+  </div>
+</section>
+
+<ul class="interests" aria-label="Research interests">
+  <li>Macro-finance</li>
+  <li>Behavioral macroeconomics</li>
+  <li>Networks</li>
+  <li>Asset pricing</li>
+  <li>General equilibrium</li>
+</ul>
+
+<section class="section">
+  <h2 class="section-title">Personal Narrative</h2>
+  <div class="prose">
+    <p>I’m Faisal Quaiyyum, a Predoctoral Research Fellow at the University of Chicago Booth School of Business (Fama-Miller Center). I work with <strong>Professors Lars Peter Hansen, Yueran Ma, and Raghuram Rajan</strong>, contributing to research that connects economic theory, computations, empirical evidence, and quantitative methods to better understand macroeconomic and financial dynamics.</p>
+    <p>My research interests lie in behavioral macroeconomics, asset pricing and macro-finance, firm behavior, with an emphasis on how beliefs, expectations, and informational frictions shape aggregate outcomes and risk premia. I am also very interested in networks in macroeconomics and finance—how interconnectedness across firms, sectors, and financial intermediaries transmits and amplifies shocks, generating heterogeneous responses and nonlinear adjustment. Across projects, my aim is to link micro-level mechanisms to macro-level fluctuations while maintaining careful identification and clear economic interpretation. Lastly, I am also intrigued by the beauty of theoretical econometrics. Methodologically, I focus on modern econometrics and machine learning as tools for measurement, forecasting, and inference in high-dimensional settings.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Comfort Zone</h2>
+  <div class="prose">
+    <p>Outside research, I read astronomy and follow astronomical figures closely. The scale of the universe continually resets my perspective: it keeps me open-minded, reminds me how astronomically small our lives are relative to what we often perceive, and encourages intellectual humility. It also makes me think about limits—forces beyond our control—and the importance of preserving ourselves and our institutions in the face of them. At the same time, the massiveness of astronomical entities carries an unexpected lesson in contentment: it nudges me to value what is near, tangible, and human, even while staying curious about what lies far beyond.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Selected Research</h2>
+  <ul class="entry-list">
+  {%- for group in site.data.research -%}
+    {%- for p in group.items -%}
+      {%- if p.featured %}
+    <li class="entry">
+      <h3 class="entry-title"><a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a></h3>
+      <p class="entry-meta">
+        {%- if p.coauthors %}<span>with {{ p.coauthors }}</span>{% endif -%}
+        {%- if p.venue %}<span>{{ p.venue | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>{% endif -%}
+        {%- if p.date %}<span>{{ p.date }}</span>{% endif -%}
+      </p>
+    </li>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endfor %}
+  </ul>
+  <a class="more" href="{{ '/research/' | relative_url }}">All research {% include icon.html name="arrow-right" %}</a>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Latest Notes</h2>
+  {%- assign latest = site.notes | sort: "date" | reverse %}
+  <ul class="entry-list">
+  {%- for n in latest limit: 2 %}
+    <li class="entry">
+      <h3 class="entry-title">
+        {%- if n.external_url -%}
+        <a href="{{ n.external_url }}" target="_blank" rel="noopener">{% include title.html title=n.title %}{% include icon.html name="external" %}</a>
+        {%- else -%}
+        <a href="{{ n.url | relative_url }}">{% include title.html title=n.title %}</a>
+        {%- endif -%}
+      </h3>
+      <p class="entry-meta"><span>{{ n.date | date: "%B %Y" }}</span>{% if n.description %}<span>{{ n.description }}</span>{% endif %}</p>
+    </li>
+  {%- endfor %}
+  </ul>
+  <a class="more" href="{{ '/notes/' | relative_url }}">All notes {% include icon.html name="arrow-right" %}</a>
+</section>

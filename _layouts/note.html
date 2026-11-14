@@ -1,0 +1,30 @@
+---
+layout: default
+body_class: note-page
+---
+<div class="progress" aria-hidden="true"></div>
+<article class="note">
+  <header class="note-header">
+    <a class="back" href="{{ '/notes/' | relative_url }}">{% include icon.html name="arrow-left" %} All notes</a>
+    <h1>{% include title.html title=page.title %}</h1>
+    {%- assign words = content | strip_html | number_of_words -%}
+    {%- assign minutes = words | plus: 100 | divided_by: 200 | at_least: 1 %}
+    <p class="note-meta">
+      <span>{{ page.author | default: site.author.name }}{% if page.coauthors %} &amp; {{ page.coauthors }}{% endif %}</span>
+      <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time></span>
+      {%- if page.last_updated %}<span>Last updated {{ page.last_updated }}</span>{% endif %}
+      {%- unless page.external_url %}<span>{{ minutes }} min read</span>{% endunless %}
+    </p>
+    {%- if page.tags and page.tags.size > 0 %}
+    <ul class="tags">{% for t in page.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+    {%- endif %}
+  </header>
+
+  <div class="prose">
+{{ content }}
+  </div>
+
+  <footer class="note-footer">
+    <a class="back" href="{{ '/notes/' | relative_url }}">{% include icon.html name="arrow-left" %} All notes</a>
+  </footer>
+</article>

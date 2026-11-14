@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <p class="footer-email">Email: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+      <p class="footer-copy">&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</p>
+    </div>
+    {% include social.html class="social-sm" %}
+  </div>
+</footer>
