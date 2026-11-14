@@ -41,7 +41,7 @@
     {%- for p in group.items -%}
       {%- if p.featured %}
     <li class="entry">
-      <h3 class="entry-title"><a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a></h3>
+      <h3 class="entry-title"><a href="{{ p.url }}" target="_blank" rel="noopener" data-goatcounter-click="paper: {{ p.title | split: ':' | first | escape }} (home)">{{ p.title }}</a></h3>
       <p class="entry-meta">
         {%- if p.coauthors %}<span>with {{ p.coauthors }}</span>{% endif -%}
         {%- if p.venue %}<span>{{ p.venue | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>{% endif -%}

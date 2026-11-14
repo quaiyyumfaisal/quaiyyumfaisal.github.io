@@ -1,0 +1,14 @@
+{%- comment -%}
+  Loads visitor analytics on the live site only (GitHub Pages builds with JEKYLL_ENV=production),
+  so local previews are never counted. Configure in _config.yml → analytics.
+  GoatCounter also counts clicks on any element with data-goatcounter-click (paper links, CV).
+{%- endcomment -%}
+{%- if jekyll.environment == "production" -%}
+  {%- if site.analytics.goatcounter and site.analytics.goatcounter != "" %}
+<script data-goatcounter="https://{{ site.analytics.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.v4.js" crossorigin="anonymous" integrity="sha384-nRw6qfbWyJha9LhsOtSb2YJDyZdKvvCFh0fJYlkquSFjUxp9FVNugbfy8q1jdxI+"></script>
+  {%- endif -%}
+  {%- if site.analytics.google and site.analytics.google != "" %}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics.google }}"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag("js", new Date()); gtag("config", "{{ site.analytics.google }}");</script>
+  {%- endif -%}
+{%- endif -%}

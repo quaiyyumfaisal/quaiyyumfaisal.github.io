@@ -38,6 +38,11 @@ social:
     - https://x.com/faisal_quaiyyum
     - https://github.com/quaiyyumfaisal
 
+# Visitor analytics (only active on the live site). Fill in ONE, then publish.
+analytics:
+  goatcounter: "quaiyyumfaisal"   # your GoatCounter code, e.g. "quaiyyumfaisal" → https://quaiyyumfaisal.goatcounter.com
+  google: ""        # or a Google Analytics 4 ID, e.g. "G-XXXXXXXXXX"
+
 # Top navigation
 nav:
   - title: About

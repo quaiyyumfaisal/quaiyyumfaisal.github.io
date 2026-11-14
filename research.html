@@ -7,7 +7,7 @@ description: Publications, working papers, research reports, monographs, and med
   <h1>Research &amp; Publications</h1>
   <p class="page-lede">
     Also on <a href="{{ site.author.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
-    and in my <a href="{{ site.cv | relative_url }}" target="_blank" rel="noopener">CV</a>.
+    and in my <a href="{{ site.cv | relative_url }}" target="_blank" rel="noopener" data-goatcounter-click="CV (research page)">CV</a>.
   </p>
   <nav class="toc" aria-label="Sections">
     {%- for group in site.data.research %}
@@ -23,7 +23,8 @@ description: Publications, working papers, research reports, monographs, and med
   {%- for p in group.items %}
     <li class="paper">
       <h3 class="paper-title">
-        {%- if p.url -%}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{%- else -%}{{ p.title }}{%- endif -%}
+        {%- assign short = p.title | split: ":" | first | escape -%}
+        {%- if p.url -%}<a href="{{ p.url }}" target="_blank" rel="noopener" data-goatcounter-click="paper: {{ short }}">{{ p.title }}</a>{%- else -%}{{ p.title }}{%- endif -%}
       </h3>
       <p class="paper-meta">
         {%- if p.coauthors %}<span>with {{ p.coauthors }}</span>{% endif -%}
@@ -34,7 +35,7 @@ description: Publications, working papers, research reports, monographs, and med
       {%- if p.links or p.abstract %}
       <div class="paper-actions">
         {%- for l in p.links %}
-        <a class="chip" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+        <a class="chip" href="{{ l.url }}" target="_blank" rel="noopener" data-goatcounter-click="{{ l.label | escape }}: {{ short }}">{{ l.label }}</a>
         {%- endfor %}
         {%- if p.abstract %}
         <details class="abstract">
