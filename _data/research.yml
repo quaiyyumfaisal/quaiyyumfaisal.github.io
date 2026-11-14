@@ -54,11 +54,13 @@
         storms with about 30 percent less error than direct social exposure.
 
     - title: "That Time of the Year Again: Government Pay Revisions in the Aggregate Economy"
-      url: https://arxiv.org/abs/2611.12565
+      url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7683060
       venue: "arXiv:2611.12565"
       date: "November 2026"
       featured: true
       links:
+        - label: SSRN
+          url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7683060
         - label: arXiv
           url: https://arxiv.org/abs/2611.12565
       abstract: >-
