@@ -454,11 +454,17 @@
   if (reduceMotion.addEventListener) reduceMotion.addEventListener("change", onMotionChange);
   else if (reduceMotion.addListener) reduceMotion.addListener(onMotionChange);
 
+  // Re-measure whenever the sky's own box changes size (also catches the first real layout,
+  // which can land after this script runs); window resize is a fallback for older browsers.
   var resizeTimer;
-  window.addEventListener("resize", function () {
+  function scheduleResize(delay) {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () { resize(false); }, 150);
-  });
+    resizeTimer = setTimeout(function () { resize(false); }, delay);
+  }
+  if ("ResizeObserver" in window) {
+    new ResizeObserver(function () { scheduleResize(60); }).observe(root);
+  }
+  window.addEventListener("resize", function () { scheduleResize(150); });
 
   resize(true);
   nextMeteor = Date.now() / 1000 + 2 + Math.random() * 3;
