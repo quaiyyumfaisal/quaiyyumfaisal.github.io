@@ -2,7 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0b0b0e">
-{% seo %}
+{%- if page.url == "/" or page.url == "/index.html" or page.title == nil %}
+<title>{{ site.title }}</title>
+{%- else %}
+<title>{{ site.title }} | {{ page.title | escape }}</title>
+{%- endif %}
+{% seo title=false %}
 <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 {%- if page.math %}
