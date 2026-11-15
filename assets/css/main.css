@@ -28,6 +28,7 @@
   --accent-rgb: 224, 112, 122;
   --accent-soft: rgba(224, 112, 122, 0.12);
 
+  --weight-boost: 0.25px;  /* raise for bolder text overall, 0 to disable */
   --radius: 12px;
   --measure: 45rem;
   --gutter: 1.5rem;
@@ -61,6 +62,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  /* uniform weight boost: a hairline stroke thickens every weight equally (keeps relative boldness) */
+  -webkit-text-stroke-width: var(--weight-boost);
 }
 
 
